@@ -1,0 +1,89 @@
+Change From
+
+/*#region Colors */
+
+HEX         RGB             HSL
+    #000000     0,0,0           0,0%,0%
+    #FFFFFF     255,255,255     0,0%,100%
+    #555555     85,85,85        0,0%,33%
+    #0055AA     0,85,170        210,100%,33%
+    #00AAAA     0,170,170       180,100%,33%
+    #AA8D00     170,141,0       50,100%,33%
+    #432100     67,33,0         30,100%,13%
+    #AA5500     170,85,0        30,100%,33%
+    #FF8811     255,136,17      30,100%,53%
+    #FFBB77     255,187,119     30,100%,73%
+    #FFD4A8     255,212,168     30,100%,83%
+    #FFEDDB     255,237,219     30,100%,93%
+
+/*#endregion*/
+
+To
+
+/*#region Colours */
+
+/*  HEX         RGB             HSL
+    #000000     0,0,0           0,0%,0%
+    #FFFFFF     255,255,255     0,0%,100%
+    #555555     85,85,85        0,0%,33%
+    #0055AA     0,85,170        210,100%,33%
+    #00AAAA     0,170,170       180,100%,33%
+    #AA8D00     170,141,0       50,100%,33%
+    #432100     67,33,0         30,100%,13%
+    #AA5500     170,85,0        30,100%,33%
+    #FF8811     255,136,17      30,100%,53%
+    #FFBB77     255,187,119     30,100%,73%
+    #FFD4A8     255,212,168     30,100%,83%
+    #FFEDDB     255,237,219     30,100%,93%
+
+/*#endregion*/
+
+Change From
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/style.css" <title>CSS3 Demos</title>
+</head>
+
+To
+
+<head>
+    <meta charset="utf-8" />
+    <title>CSS3 Demos</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+Change From
+
+#title {
+  color: hsla(210, 100%, 10%.0.75);
+}
+
+To
+
+#title {
+  color: hsla(210, 100%, 10%, 0.75);
+}
+
+Change From
+
+#topics li:nth-child(9) {
+  border-bottom-right-radius: 2em;
+}
+
+To
+#topics li:nth-child(9) {
+  border-top-right-radius: 2em;
+}
+
+Change From
+
+nav a {
+  text-shadow: 0.16em 0.16em 0.5em #ffbb77;
+}
+
+To
+
+nav a {
+  text-shadow: 0.16em 0.16em 0.16em #ffbb77;
+}
