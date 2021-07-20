@@ -1,10 +1,4 @@
-  .box {
-            width: 100px;
-            height: 100px;
-            background: #dddddd;   
-            margin: 25px;     
-        }
-        @-webkit-keyframes blushing
+   @-webkit-keyframes blushing
         {
             from {background: #dddddd;}
             to {background: #ff9999;}
@@ -45,3 +39,4 @@
         }
         #div4 {
             -webkit-animation: shockMe 12s infinite alternate;
+        }         
