@@ -1,6 +1,6 @@
-@charset 'utf-8';
+@charset "UTF-8";
 
-/*#region Colors */
+/*#region Colours */
 
 /*  HEX         RGB             HSL
     #000000     0,0,0           0,0%,0%
@@ -17,6 +17,7 @@
     #FFEDDB     255,237,219     30,100%,93%
 
 /*#endregion*/
+
 /*#region CSS Reset */
 
 /** http://meyerweb.com/eric/tools/css/reset/ **/
@@ -146,6 +147,7 @@ table {
 }
 
 /*#endregion*/
+
 /*#region Elements */
 
 body {
@@ -220,6 +222,7 @@ footer p:after {
 }
 
 /*#endregion*/
+
 /*#region IDs */
 #contact {
   background-color: #ffffff;
@@ -235,7 +238,6 @@ footer p:after {
 }
 #subtitle {
   font-size: 3em;
-  color: #aa5500;
 }
 #content {
   position: relative;
@@ -260,63 +262,49 @@ footer p:after {
   top: 10em;
   left: 2em;
 }
-#intro div {
-  position: relative;
-  -webkit-transition: all 2s;
-  -ms-transition: all 2s;
-  transition: all 2s;
-  color: #555555;
-}
-#intro div.introClicked {
-  top: 0.5em;
-  left: 0.5em;
-  -webkit-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  transform: rotate(10deg);
-  font-family: DJ;
-  font-size: 5em;
-  font-weight: bold;
-  color: #00aaaa;
-}
 /*#endregion*/
 
 /*#region Content */
-
 @font-face {
   font-family: Aargh;
-  src: url("../fonts/aaargh-webfont.woff") format("woff");
+  src: url("../fonts/Aaargh-webfont.woff");
 }
+
 @font-face {
   font-family: DJ;
-  src: url("../fonts/dj-webfont.woff") format("woff");
+  src: url("../fonts/DJ-webfont.woff");
 }
+
 body {
   font-family: Aargh, Arial;
 }
+
 #title,
-#subtitle {
-  font-family: DJ, Script;
+#subttitle {
+  font-family: DJ, sans-serif;
 }
+
 #title {
-  text-shadow: 0.16em 0.16em 0.5em #aa5500;
+  text-shadow: 0.16em 0.16em 0.16em #aa5500;
 }
+
 h1,
 h2 {
-  text-shadow: 0.016em 0.016em 0.25em #aa5500;
+  text-shadow: 0.16em 0.16em 0.25em #aa5500;
 }
+
 nav a {
   text-shadow: 0.16em 0.16em 0.16em #ffbb77;
 }
-nav a:last-child {
-  float: right;
-  padding-right: 1em;
-}
+
 #topics li:nth-child(3n) {
   background-color: #ffbb77;
 }
+
 #topics li:nth-child(3n-1) {
   background-color: #ffd4a8;
 }
+
 #topics li:nth-child(3n-2) {
   background-color: #ffeddb;
 }
@@ -324,10 +312,12 @@ nav a:last-child {
 #topics li h1 {
   font-size: 1em;
 }
+
 #topics li:hover {
   background-color: #432100;
   color: #ffeddb;
 }
+
 #topics li:hover p {
   display: inherit;
   color: #aa5500;
@@ -341,12 +331,14 @@ section,
 #intro {
   z-index: 1;
 }
+
 #content > *:not(:target, #intro) {
   z-index: -1;
 }
 :target {
   z-index: 2;
 }
+
 ::selection {
   background-color: #ff8811;
   color: #ffffff;
@@ -361,10 +353,12 @@ section,
 :valid {
   background-color: #ffffff;
 }
+
 :valid::-webkit-input-placeholder {
   color: #aa5500;
   font-style: italic;
 }
+
 :invalid::-webkit-input-placeholder {
   color: #aa5500;
   font-style: italic;
@@ -372,9 +366,15 @@ section,
 :not([type="submit"]):optional {
   border-style: dashed;
 }
-
 /*#endregion*/
+
 /*#region Layout */
+#topics ul {
+  -webkit-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+}
 
 #about {
   display: -webkit-box;
@@ -384,31 +384,36 @@ section,
   background: url(../images/css3logo.png) bottom left,
     url(../images/about_palermo_right.png) top right, #ffffff;
   background-repeat: no-repeat;
-  background-origin: border-box, border-box;
   background-size: auto, contain;
 }
-
 /*#endregion*/
+
 /*#region Colors */
 
 #title:hover {
   opacity: 0.75;
 }
+
 #subtitle {
   opacity: 0.75;
 }
+
 #subtitle:hover {
   opacity: 1;
 }
+
 nav a {
   color: rgba(0, 0, 0, 0);
 }
+
 :invalid:focus {
   background-color: rgba(67, 33, 0, 0.22);
 }
+
 #title {
   color: hsla(210, 100%, 10%, 0.75);
 }
+
 body {
   background: -webkit-gradient(
     linear,
@@ -419,41 +424,75 @@ body {
   );
   background: -ms-linear-gradient(bottom, #432100 30%, #00aaaa 70%);
 }
+.grad {
+  background: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA')"; /* IE8 */
+  background: -webkit-linear-gradient(#ffffff, #00aaaa); /*new webkit*/
+  background: -ms-linear-gradient(bottom, #ffffff 50%, #00aaaa 50%); /* IE10 */
+  background: linear-gradient(#ffffff, #00aaaa); /*future CSS3 browsers*/
+}
 
 /*#endregion*/
+
 /*#region Borders */
 
 input {
   border-radius: 1em;
 }
 
+#topics ul {
+  border-radius: 2em;
+}
+
+#topics li:first-child {
+  border-top-left-radius: 2em;
+}
+
+#topics li:nth-child(4) {
+  border-bottom-left-radius: 2em;
+}
+
+#topics li:nth-child(9) {
+  border-top-right-radius: 2em;
+}
+#topics li:last-child {
+  border-bottom-right-radius: 2em;
+}
+
 #content {
   border-radius: 2em;
 }
+
 #titles {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
 }
-footer {
+
+#footer {
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
 }
+
 article,
 section {
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
 }
-input:focus {
-  box-shadow: 0 0 0.25em 0.125em #aa5500;
+
+#topics ul {
+  box-shadow: 0.5em 0.5em 0.5em #555555;
+}
+:focus {
+  box-shadow: 0 0 0.25 0.125em #aa5500;
 }
 #content {
   box-shadow: 0 0 0.5em 0.16em #555555, 0.5em 0.5em 3em #0055aa,
     -0.25em 0 3em #0055aa;
 }
-
 /*#endregion*/
-/*#region Transforms */
 
+/*#region Transforms */
 #topics li:nth-child(9):hover h1 {
   -webkit-transform: scale(1.25) skew(44deg, -4deg);
   -ms-transform: scale(1.25) skew(44deg, -4deg);
@@ -461,59 +500,67 @@ input:focus {
 }
 
 /*#endregion*/
-/*#region Animations */
 
+/*#region Animations */
 #title {
-  -webkit-transition: color 3s;
-  -ms-transition: color 3s;
+  -webkit-transition: all 3s;
+  -ms-transition: all 3s;
 }
+
 #title:hover {
   color: #ffffff;
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
 }
 /*#endregion*/
 
 /*#region Media Queries */
-
-@media screen and (max-width: 800px), (max-device-width: 800px) {
+@media screen and (max-width: 800px) {
   body {
     font-size: 85%;
   }
+
   #topics * {
     border-radius: 0 !important;
-    box-shadow: none !important;
+    box-shadow: none !important ;
   }
+
   #topics ul {
     -webkit-column-count: 0;
     column-count: 0;
   }
+
   #topics li {
     display: inline-block;
-    width: 7.5em;
+    width: 7.75em;
     float: left;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    padding-top: 0.125em;
-    padding-bottom: 0.125em;
   }
+
   #subtitle {
     font-size: 2em;
   }
+
   #title {
     -webkit-transition: 0s;
     -ms-transition: 0s;
     -transition: 0s;
     font-size: 4em;
   }
+
   #about {
     display: inherit;
     background-position: right bottom, right top;
     background-size: 20%, 50%;
   }
+
   #about p {
     -webkit-transform: rotate(16deg) translate(22em, 8em) scale(2);
     -ms-transform: rotate(16deg) translate(22em, 8em) scale(2);
     transform: rotate(16deg) translate(22em, 8em) scale(2);
   }
+
   #content {
     width: 35em;
   }
@@ -530,6 +577,7 @@ input:focus {
     padding-right: 1em;
   }
 }
+
 @media screen and (max-width: 480px), (max-device-width: 480px) {
   body {
     font-size: 75%;
@@ -551,71 +599,10 @@ input:focus {
     transform: rotate(7deg) translate(10em, 8em) scale(1.5);
   }
   #topics li {
-    display: inline-block;
-    width: 5.5em;
-    float: left;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
-    padding-top: 0.125em;
-    padding-bottom: 0.125em;
+    padding: 0.4375em;
   }
   #topics li p {
     font-size: 0.8125em;
   }
 }
-
 /*#endregion*/
-
-no-textshadow nav a {
-  color: #ffbb77;
-  font-weight: bold;
-}
-
-.no-textshadow nav a:hover {
-  color: #ffeddb;
-}
-
-.no-cssgradients * {
-  border-radius: 0 !important;
-}
-
-/* taken from layout */
-.csscolumns #topics ul {
-  -webkit-column-count: 3;
-  column-count: 3;
-  -webkit-column-gap: 0;
-  column-gap: 0;
-}
-
-/* taken from borders */
-.csscolumns #topics ul {
-  border-radius: 2em;
-}
-.csscolumns #topics li:first-child {
-  border-top-left-radius: 2em;
-}
-.csscolumns #topics li:nth-child(4) {
-  border-bottom-left-radius: 2em;
-}
-.csscolumns #topics li:nth-child(9) {
-  border-top-right-radius: 2em;
-}
-.csscolumns #topics li:last-child {
-  border-bottom-right-radius: 2em;
-}
-.csscolumns #topics ul {
-  box-shadow: 0.5em 0.5em 0.5em #555555;
-}
-
-/* taken from colors */
-.no-cssgradients .grad {
-  background: #ffffff;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA'); /* IE6 & IE7 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA')"; /* IE8 */
-}
-
-.cssgradients .grad {
-  background: -webkit-linear-gradient(bottom, #ffffff, #00aaaa);
-  background: -ms-linear-gradient(bottom, #ffffff, #00aaaa);
-  background: linear-gradient(bottom, #ffffff, #00aaaa);
-}
