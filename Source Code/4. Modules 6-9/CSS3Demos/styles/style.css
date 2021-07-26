@@ -506,7 +506,7 @@ input:focus {
   }
   #about {
     display: inherit;
-    background-position: right bottom, right top;
+    background-position: left bottom, right top;
     background-size: 20%, 50%;
   }
   #about p {
